@@ -411,7 +411,7 @@ async def on_message(message):
                 celticist = celticist[:celticist.find(dialect.closeBracket)+1]
                 
                 #make sure there's no spaces before the opening bracket and after the closing bracket (this stops people accidentally triggering the bot)
-                if celticist[0]!=" " and celticist[-1]!=" ":
+                if celticist[0] in "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ%\"" and celticist[-1] in "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ%\"":
                     ipa = ""
 
                     #add "-" after stress marks so sequences of vowels are preserved
